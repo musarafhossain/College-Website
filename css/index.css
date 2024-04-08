@@ -5,28 +5,227 @@
   user-select: none;
 }
 
+html, body{
+  position: relative;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------ College Name Details Section --------------------------------------*/
 .college-name-container{
   width: 100%;
-  height: 1000px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/assets/lobby.webp");
   background-size: cover;
+  height: max-content;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .college-name-container .college-name{
+  margin-top: 2%;
   font-size: 1.5rem;
   font-family: Amethysta;
+  font-family: sans-serif;
   font-weight: 600;
 }
 
 .college-name-container .college-title{
-  font-size: 1rem;
-  font-family: Merriweather;
+  font-size: 0.9rem;
+  font-family: Roboto;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 0.5%;
 }
 
 .college-name-container .college-details{
-  font-size: 1rem;
+  margin-top: 0.5%;
+  font-size: 0.8rem;
+  font-family: "Urbanist";
+  letter-spacing: 8px;
+  line-height: 1.5;
 }
+/*------------------------------------ College Name Details Section Ends Here --------------------------------------*/
+
+/*--------------------------------------------- Swiper Image Container----- --------------------------------------*/
+.swipe-photo-gallery {
+  margin: 2% 0;
+  max-width: 900px;
+  width: 100%;
+  aspect-ratio: 16/7.5;
+  padding: 0.4%;
+  background-color: #fff;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.swipe-photo-gallery .icon-parent{
+  width: 100%;
+  display: flex;
+  align-items: row;
+  gap: 0.5%;
+}
+
+.swipe-photo-gallery .icon-parent *{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.swipe-photo-gallery .icon-parent .icon-1{
+  background-color: #fc2727;
+}
+
+.swipe-photo-gallery .icon-parent .icon-2{
+  background-color: #d1b32c;
+}
+
+.swipe-photo-gallery .icon-parent .icon-3{
+  background-color: #279227;
+}
+
+.swipe-photo-gallery .swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
+  margin-top: 0.5%;
+  border: 2px solid black;
+  background-color: #000;
+}
+
+.swipe-photo-gallery .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swipe-photo-gallery .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*------------------------------------ Swiper Image Container Ends Here --------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------- 3D Cube Design ---------------------------------------------*/
+.cube-container {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 11%;
+}
+
+.cube-container-1{
+  left: 25%;
+}
+
+.cube-container-2{
+  right: 25%;
+}
+    
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 3s infinite linear;
+}
+    
+.cube-container .cube .face {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: rgb(21, 153, 214);
+  font-size: 1.8px;
+  text-align: center;
+  line-height: 20px;
+  background: transparent;
+  opacity: 0.9;
+  border: 0.2px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(14, 8, 110, 1) 0%,
+    rgba(15, 15, 167, 1) 26%,
+    rgba(20, 45, 255, 1) 85%
+  );
+  box-shadow: 0 0 10px rgba(8, 178, 245, 0.61);
+}
+    
+.cube-container .cube .front {
+  transform: translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .back {
+  transform: rotateY(180deg) translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .right {
+  transform: rotateY(90deg) translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .left {
+  transform: rotateY(-90deg) translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .top {
+  transform: rotateX(90deg) translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .bottom {
+  transform: rotateX(-90deg) translateZ(10px);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+    
+.cube-container .cube .cube-container:hover .cube {
+  animation-play-state: paused;
+}
+    
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+    
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+/*------------------------------------- 3D Cube Design Ends Here -------------------------------------------*/
