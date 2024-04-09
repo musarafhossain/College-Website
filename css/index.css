@@ -24,7 +24,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/assets/lobby.webp");
   background-size: cover;
   height: max-content;
   color: white;
